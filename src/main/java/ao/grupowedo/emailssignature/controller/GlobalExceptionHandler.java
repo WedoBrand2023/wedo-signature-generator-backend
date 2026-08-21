@@ -29,6 +29,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleGeneralException(
         Exception exception
     ) {
+        exception.printStackTrace();
+    
         return ResponseEntity
             .status(HttpStatus.INTERNAL_SERVER_ERROR)
             .body(
